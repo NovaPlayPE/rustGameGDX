@@ -1,0 +1,29 @@
+[package]
+name = "rustGameGDX"
+version = "1.0.0"
+authors = ["Ragnok123"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+jni = "0.18.0"
+byteorder = "1.3.4"
+vek = "0.14"
+strum = "0.21"
+cgmath = "0.18"
+glutin = "0.27.0"
+glium = "0.30.1"
+image = "0.23.14"
+sdl2 = "0.33"
+lyon_tessellation = "0.15"
+
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+panic = 'abort'
+lto = true
